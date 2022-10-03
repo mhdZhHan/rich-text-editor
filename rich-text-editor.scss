@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+    background: #222;
+}
+
+.container {
+    background: #fff;
+    width: 99vmin;
+    padding: 50px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 10px;
+    box-shadow: 0 25px 50px rgba(7, 20, 35, 0.2);
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    button {
+        height: 28px;
+        width: 28px;
+        display: grid;
+        place-items: center;
+        border-radius: 3px;
+        background: #fff;
+        border: none;
+        outline: none;
+        color: #030929;
+    }
+    .active {
+        background-color: #e0e9ff;
+    }
+    select {
+        padding: 7px;
+        border: 1px solid #030929;
+        border-radius: 3px;
+        background-color: #fff;
+    }
+    select, label {
+        font-family: 'Ubuntu', sans-serif;
+    }
+    .input_box {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        input {
+            &[type='color']{
+                // -webkit-appearance: none;
+                // -moz-appearance: none;
+                appearance: none;
+                background: transparent;
+                width: 40px;
+                height: 28px;
+                border: none;
+                cursor: pointer;
+                outline: none;
+            }
+            &[type='color']::-webkit-color-swatch{
+                border-radius: 15px;
+                box-shadow: 0 0 0 2px #fff, 0 0 0 3px #030929;
+            }
+            &[type='color']::-moz-color-swatch{
+                border-radius: 15px;
+                box-shadow: 0 0 0 2px #fff, 0 0 0 3px #030929;
+            }
+        }
+    }
+}
+
+#textInput {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    height: 50vh;
+}

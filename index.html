@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rich text editor</title>
+
+    <!-- google font icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./rich-text-editor.css" />
+
+    <!-- scripts -->
+    <script src="./rich-text-editor.js"></script>
+</head>
+<body>
+    <div id="root">
+        <div class="container">
+            <div class="options">
+                <!-- (Text Formats) -->
+                <button id="bold" class="option_button format">
+                    <span class="material-symbols-outlined">format_bold</span>
+                </button>
+                <button id="italic" class="option_button format">
+                    <span class="material-symbols-outlined">format_italic</span>
+                </button>
+                <button id="underline" class="option_button format">
+                    <span class="material-symbols-outlined">format_underlined</span>
+                </button>
+                <button id="strikethrough" class="option_button format">
+                    <span class="material-symbols-outlined">format_strikethrough</span>
+                </button>
+                <button id="superscript" class="option_button script">
+                    <span class="material-symbols-outlined">superscript</span>
+                </button>
+                <button id="subscript" class="option_button script">
+                    <span class="material-symbols-outlined">subscript</span>
+                </button>
+
+                <!-- (List Types) -->
+                <button id="insertOrderedList" class="option_button">
+                    <span class="material-symbols-outlined">format_list_numbered</span>
+                </button>
+                <button id="insertUnorderedList" class="option_button">
+                    <span class="material-symbols-outlined">format_list_bulleted</span>
+                </button>
+
+                <!-- (Undo/Redo) -->
+                <button id="undo" class="option_button">
+                    <span class="material-symbols-outlined">undo</span>
+                </button>
+                <button id="redo" class="option_button">
+                    <span class="material-symbols-outlined">redo</span>
+                </button>
+
+                <!-- (Link) -->
+                <button id="createLink" class="adv_option_button link">
+                    <span class="material-symbols-outlined">add_link</span>
+                </button>
+                <button id="unlink" class="option_button">
+                    <span class="material-symbols-outlined">link_off</span>
+                </button>
+
+                <!-- Alignment -->
+                <button id="justifyLeft" class="option_button align">
+                    <span class="material-symbols-outlined">format_align_left</span>
+                </button>
+                <button id="justifyCenter" class="option_button align">
+                    <span class="material-symbols-outlined">format_align_center</span>
+                </button>
+                <button id="justifyRight" class="option_button align">
+                    <span class="material-symbols-outlined">format_align_right</span>
+                </button>
+                <button id="justifyFull" class="option_button align">
+                    <span class="material-symbols-outlined">format_align_justify</span>
+                </button>
+                <button id="indent" class="option_button tab_spacing">
+                    <span class="material-symbols-outlined">format_indent_increase</span>
+                </button>
+                <button id="outend" class="option_button tab_spacing">
+                    <span class="material-symbols-outlined">format_indent_decrease</span>
+                </button>
+
+                <!-- (Headings) -->
+                <select name="" id="formatBlock" class="adv_option_button">
+                    <option value="h1">H1</option>
+                    <option value="h2">H2</option>
+                    <option value="h3">H3</option>
+                    <option value="h4">H4</option>
+                    <option value="h5">H5</option>
+                    <option value="h6">H6</option>
+                </select>
+
+                <!-- (Font Name) -->
+                <select name="" id="fontName" class="adv_option_button"></select>
+
+                <!-- (Font Size) -->
+                <select name="" id="fontSize" class="adv_option_button"></select>
+
+                <!-- (Color Picker Text/Bg) -->
+                <div class="input_box">
+                    <input id="foreColor" type="color" class="adv_option_button" />
+                    <label for="foreColor">Text Color</label>
+                </div>
+                <div class="input_box">
+                    <input id="backColor" type="color" class="adv_option_button" />
+                    <label for="backColor">Highlight Color</label>
+                </div>
+            </div> <!--( #root > .container > .options )-->
+
+            <div id="textInput" contenteditable="true"></div>
+        </div> <!--( #root > .container )-->
+    </div> <!--( #root )-->
+</body>
+</html>
